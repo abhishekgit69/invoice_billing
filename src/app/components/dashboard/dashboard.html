@@ -1,9 +1,13 @@
 <div class="page-layout">
 <header class="dashboard-header">
-  <div class="header-title">
+   <div class="header-text-group">
     <h2>Payment History</h2>
-    <p class="text-muted">Please reach out to our friendly team via team@codepulse.com if you have questions.</p>
+    <!-- <button mat-button color="primary" (click)="openUserOptions()">Generate Invoice</button> -->
+    <p class="text-muted">Please reach out to our friendly team via abhisheks11116@gmail.com if you have questions.</p>
   </div>
+      <div class="header-action-group">
+      <!-- <button mat-raised-button color="primary" (click)="openUserOptions()">Generate Invoice</button> -->
+    </div>
 </header>
 
  <main class="table-container">
@@ -32,12 +36,31 @@
   <ng-container matColumnDef="Action">
     <th mat-header-cell *matHeaderCellDef> Action </th>
     <td mat-cell *matCellDef="let element">
-      <button mat-button color="primary" (click)="downloadInvoice(element['invoice_url'])"> Download </button>
+      <button mat-raised-button color="primary" [matMenuTriggerFor]="userOptionsMenu">Actions</button>
+       <mat-menu #userOptionsMenu="matMenu">
+      <button mat-menu-item (click)="opendialog(element.id)">
+        <mat-icon>update</mat-icon>
+        <span>Update Payment Information</span>
+      </button>
+      <button mat-menu-item (click)="downloadInvoice(element['invoice_url'])">
+        <mat-icon>download</mat-icon>
+        <span>Download Invoice</span>
+      </button>
+    </mat-menu>
+      <!-- <button mat-button color="primary" (click)="downloadInvoice(element['invoice_url'])"> Download </button> -->
     </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
 </main>
+<mat-paginator #paginator
+              [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              [disabled]="dataSource.length <= paginator.pageSize" 
+              aria-label="Select page">
+</mat-paginator>
 </div>
