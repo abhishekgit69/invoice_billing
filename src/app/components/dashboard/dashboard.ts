@@ -4,7 +4,7 @@ import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClient , HttpHeaders  } from '@angular/common/http';
-import { environment } from '../../../environments/environment'; 
+import { environment } from '../../../environments/environment.example';
 import { Router } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -127,4 +127,3 @@ export class Dashboard implements OnInit {
     }
   }
 }
-
