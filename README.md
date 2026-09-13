@@ -1,5 +1,33 @@
 # InvoiceBilling
 
+URL- https://invoice26.netlify.app/
+
+A modern **Billing History Dashboard** built with Angular 22. This application displays invoice and billing information from Supabase, demonstrating API integration, modern Angular patterns, and professional frontend development practices.
+
+## ✨ Key Features
+
+### 🌐 **Supabase API Integration**
+- Retrieves billing history data from Supabase REST API in real-time
+- Secure API key authentication with custom HTTP headers
+- Dynamic data loading and responsive updates
+
+### 📋 **Billing History Dashboard**
+- Interactive data table displaying invoice records
+- Update payment status
+- Direct invoice preview/download functionality
+- Material Design table with professional styling
+
+### 🎨 **Modern UI/UX**
+- Angular Material components for clean, professional interface
+- Standalone component architecture
+
+
+### ⚙️ **Advanced Angular Features**
+- Reactive programming with RxJS subscriptions
+- Dependency injection for HTTP client services
+- Component lifecycle management (OnInit)
+
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
 
 ## Development server

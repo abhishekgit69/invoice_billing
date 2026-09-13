@@ -16,3 +16,8 @@ table.mat-mdc-table {
   width: 60% !important; /* Force width constraint safely on desktop screens */
   background-color: #ffffff;
 }
+
+.header-action-group {
+  flex-shrink: 0;            
+  margin-top: 0.25rem;       
+}
