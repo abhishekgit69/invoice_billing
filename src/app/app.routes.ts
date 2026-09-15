@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { Dashboard } from './components/dashboard/dashboard';
 import { OpenForm } from './components/open-form/open-form';
-import { OpenForm } from './components/open-form/open-form';
 
 export const routes: Routes = [
 
